@@ -1,0 +1,36 @@
+<div class="col-xs-4" float="left">
+  <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+  <canvas width='200' height='450' style='border:2px solid black' align='center'></canvas>
+  <script src='../scripts/tetris/tetris.js'></script>
+  <script src='../scripts/tetris/controller.js'></script>
+  <script src='../scripts/tetris/render.js'></script>
+</div>
+
+<div class="col-xs-4" style="border:1px solid black;margin:auto" float="right">
+  <h4 style="font-color:red;">Modify the code below by clicking and dragging the boxes to the values!</h4>
+  <code>
+    <h4>class Tetris {</h4>
+    <p>width = </p><div style="border:1px solid black;" class="div1" id="width" ondrop="$ctrl.drop(event)" ondragover="$ctrl.allowDrop(event)"></br></br></div>
+    <p>height = </p><div style="border:1px solid black;" class="div1" id="height" ondrop="$ctrl.drop(event)" ondragover="$ctrl.allowDrop(event)"></br></br></div>
+    <p>columns = </p><div style="border:1px solid black;" class="div1" id="columns" ondrop="$ctrl.drop(event)" ondragover="$ctrl.allowDrop(event)"></br></br></div>
+    <p>rows = </p><div style="border:1px solid black;" class="div1" id="rows" ondrop="$ctrl.drop(event)" ondragover="$ctrl.allowDrop(event)"></br></br></div>
+    <p>colors = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="$ctrl.drop(event)" ondragover="$ctrl.allowDrop(event)"></br></br></div>
+    <p>}
+  </code>
+</div>
+
+</br>
+</br>
+<div class="col-xs-3">
+  <button class="btn" id="300" draggable="true" ondragstart="$ctrl.drag(event)">300</button>
+  <button class="btn" id="600" draggable="true" ondragstart="$ctrl.drag(event)">600</button>
+  <button class="btn" id="10" draggable="true" ondragstart="$ctrl.drag(event)">10</button>
+  <button class="btn" id="20" draggable="true" ondragstart="$ctrl.drag(event)">20</button>
+  <button class="btn" id="cyan" draggable="true" ondragstart="$ctrl.drag(event)">cyan</button>
+  <button class="btn" id="orange" draggable="true" ondragstart="$ctrl.drag(event)">orange</button>
+  <button class="btn" id="blue" draggable="true" ondragstart="$ctrl.drag(event)">blue</button>
+  <button class="btn" id="yellow" draggable="true" ondragstart="$ctrl.drag(event)">yellow</button>
+  <button class="btn" id="red" draggable="true" ondragstart="$ctrl.drag(event)">red</button>
+  <button class="btn" id="green" draggable="true" ondragstart="$ctrl.drag(event)">green</button>
+  <button class="btn" id="purple" draggable="true" ondragstart="$ctrl.drag(event)">purple</button>
+</div>
