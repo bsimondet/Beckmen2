@@ -1,3 +1,4 @@
+'use strict';
 var COLS = 10, ROWS = 20;
 var board = [];
 var lose;

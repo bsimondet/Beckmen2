@@ -1,3 +1,4 @@
+'use strict';
 var canvas = document.getElementsByTagName( 'canvas' )[ 0 ];
 var ctx = canvas.getContext( '2d' );
 var W = 200, H = 450;

@@ -14,18 +14,4 @@ angular.module('codeArcadeApp')
       'AngularJS',
       'Karma'
     ];
-
-    this.allowDrop = function(ev) {
-      ev.preventDefault();
-    }
-
-    this.drag = function(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-    }
-
-    this.drop = function(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-    }
   });
