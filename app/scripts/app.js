@@ -34,6 +34,11 @@ angular
         controller: 'PlaytetrisCtrl',
         controllerAs: 'playtetris'
       })
+      .when('/pacman', {
+        templateUrl: 'views/pacman.html',
+        controller: 'PacmanCtrl',
+        controllerAs: 'pacman'
+      })
       .otherwise({
         redirectTo: '/'
       });
