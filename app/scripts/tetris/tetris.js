@@ -21,8 +21,10 @@ var shapes = [
       1, 1, 1 ]
 ];
 var colors = [
-    'cyan', 'orange', 'blue', 'yellow', 'red', 'green', 'purple'
+    //'cyan', 'orange', 'blue', 'yellow', 'red', 'green', 'purple'
+    'black'
 ];
+var colorsModified = false;
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -35,6 +37,55 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function changeColumns(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  // if(typeof(data) !== Number) {
+  //   alert("You tried to put something here that doesn't belong. Try a number instead.")
+  //   location.reload();
+  // }
+  COLS=data;
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function changeRows(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  // if(typeof(data) !== Number) {
+  //   alert("You tried to put something here that doesn't belong. Try a number instead.")
+  //   location.reload();
+  // }
+  ROWS=data;
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function changeColors(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  // if(typeof(data) !== String) {
+  //   alert("You tried to put something here that doesn't belong. Try a word instead.")
+  //   location.reload();
+  // }
+  if (colorsModified === false) {
+    colors = [];
+    colorsModified = true;
+  }
+  colors.push(data);
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function changeSpeed(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  data = Number(data);
+  if(data === NaN) {
+    alert("You tried to put something here that doesn't belong. Try a number instead.")
+    location.reload();
+  }
+  newGame(data);
   ev.target.appendChild(document.getElementById(data));
 }
 
@@ -189,12 +240,16 @@ function valid( offsetX, offsetY, newCurrent ) {
     return true;
 }
 
-function newGame() {
+function newGame(speed) {
     clearInterval(interval);
     init();
     newShape();
     lose = false;
-    interval = setInterval( tick, 250 );
+    if(speed == null) {
+      interval = setInterval( tick, 250 );
+    } else {
+      interval = setInterval(tick, speed);
+    }
 }
 
 newGame();

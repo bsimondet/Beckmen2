@@ -4,6 +4,28 @@ var ctx = canvas.getContext( '2d' );
 var W = 200, H = 450;
 var BLOCK_W = W / COLS, BLOCK_H = H / ROWS;
 
+function changeHeight(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  if(typeof(data) !== Number) {
+    alert("You tried to put something here that doesn't belong. Try a number instead.")
+    location.reload();
+  }
+  H = data;
+  ev.target.appendChild(document.getElementById(data));
+}
+
+function changeWidth(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  if(typeof(data) !== Number) {
+    alert("You tried to put something here that doesn't belong. Try a number instead.")
+    location.reload();
+  }
+  W = data;
+  ev.target.appendChild(document.getElementById(data));
+}
+
 // draw a single square at (x, y)
 function drawBlock( x, y ) {
     ctx.fillRect( BLOCK_W * x, BLOCK_H * y, BLOCK_W - 1 , BLOCK_H - 1 );
@@ -24,7 +46,7 @@ function render() {
         }
     }
 
-    ctx.fillStyle = 'red';
+    //ctx.fillStyle = 'red';
     ctx.strokeStyle = 'black';
     for ( var y = 0; y < 4; ++y ) {
         for ( var x = 0; x < 4; ++x ) {

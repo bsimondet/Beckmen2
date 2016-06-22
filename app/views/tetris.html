@@ -12,11 +12,10 @@
   <h4 style="font-color:red;">Modify the code below by clicking and dragging the boxes to the values!</h4>
   <code>
     <h4>class Tetris {</h4>
-    <p>width = </p><div style="border:1px solid black;" class="div1" id="width" ondrop="drop(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>height = </p><div style="border:1px solid black;" class="div1" id="height" ondrop="drop(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>columns = </p><div style="border:1px solid black;" class="div1" id="columns" ondrop="drop(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>rows = </p><div style="border:1px solid black;" class="div1" id="rows" ondrop="drop(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>colors = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="drop(event)" ondragover="allowDrop(event)"></br></br></div>
+    <p>columns = </p><div style="border:1px solid black;" class="div1" id="columns" ondrop="changeColumns(event)" ondragover="allowDrop(event)"></br></br></div>
+    <p>rows = </p><div style="border:1px solid black;" class="div1" id="rows" ondrop="changeRows(event)" ondragover="allowDrop(event)"></br></br></div>
+    <p>colors = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="changeColors(event)" ondragover="allowDrop(event)"></br></br></div>
+    <p>dropSpeed = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="changeSpeed(event)" ondragover="allowDrop(event)"></br></br></div>
     <p>}
   </code>
 </div>
@@ -37,3 +36,11 @@
   <button class="btn" id="purple" draggable="true" ondragstart="drag(event)">purple</button>
 </div>
 </div>
+</br>
+</br>
+
+<div class="col-xs-12">
+</br>
+  <h2 align="center">Help:</h2>
+  <p align="center">Try dragging the blocks into the spots to change the number of columns, rows, colors and drop speed. Remember to put numbers in the columns, rows, and drop speed sections for them to work correctly!</p>
+  <p align="center">
