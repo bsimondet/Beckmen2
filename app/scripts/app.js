@@ -29,6 +29,11 @@ angular
         controller: 'TetrisCtrl',
         controllerAs: 'tetris'
       })
+      .when('/playtetris', {
+        templateUrl: 'views/playtetris.html',
+        controller: 'PlaytetrisCtrl',
+        controllerAs: 'playtetris'
+      })
       .otherwise({
         redirectTo: '/'
       });

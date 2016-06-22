@@ -14,4 +14,5 @@ angular.module('codeArcadeApp')
       'AngularJS',
       'Karma'
     ];
+
   });

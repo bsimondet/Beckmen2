@@ -16,9 +16,6 @@
     <!-- endbuild -->
   </head>
   <body ng-app="codeArcadeApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="header">
@@ -41,6 +38,7 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
               <li><a ng-href="#/tetris">Tetris</a></li>
+              <li><a ng-href="#/playtetris">Tetris Trinket</a></li>
             </ul>
           </div>
         </div>
@@ -51,11 +49,11 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Crew212 team</p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -86,7 +84,8 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/tetris.js"></script>
+        <script src="scripts/controllers/playtetris.js"></script>
         <!-- endbuild -->
 </body>
 </html>

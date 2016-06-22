@@ -2,13 +2,14 @@
 
 /**
  * @ngdoc function
- * @name codeArcadeApp.controller:AboutCtrl
+ * @name codeArcadeApp.controller:TetrisCtrl
  * @description
- * # AboutCtrl
+ * # TetrisCtrl
  * Controller of the codeArcadeApp
  */
+
 angular.module('codeArcadeApp')
-  .controller('AboutCtrl', function () {
+  .controller('TetrisCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,4 +17,5 @@ angular.module('codeArcadeApp')
     ];
 
     
+
   });
