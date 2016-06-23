@@ -12,11 +12,11 @@
   <h4 style="font-color:red;">Modify the code below by clicking and dragging the boxes to the values!</h4>
   <code>
     <h4>class Tetris {</h4>
-    <p>columns = </p><div style="border:1px solid black;" class="div1" id="columns" ondrop="changeColumns(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>rows = </p><div style="border:1px solid black;" class="div1" id="rows" ondrop="changeRows(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>colors = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="changeColors(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>dropSpeed = </p><div style="border:1px solid black;" class="div1" id="color" ondrop="changeSpeed(event)" ondragover="allowDrop(event)"></br></br></div>
-    <p>}
+    <h6>columns = </h6><div style="border:1px solid black;" class="div1" id="columns" ondrop="changeColumns(event)" ondragover="allowDrop(event)"></br></br></div>
+    <h6>rows = </h6><div style="border:1px solid black;" class="div1" id="rows" ondrop="changeRows(event)" ondragover="allowDrop(event)"></br></br></div>
+    <h6>colors = </h6><div style="border:1px solid black;" class="div1" id="color" ondrop="changeColors(event)" ondragover="allowDrop(event)"></br></br></div>
+    <h6>dropSpeed = </h6><div style="border:1px solid black;" class="div1" id="color" ondrop="changeSpeed(event)" ondragover="allowDrop(event)"></br></br></div>
+    <h6>}
   </code>
 </div>
 
@@ -39,10 +39,25 @@
 </br>
 </br>
 
+<script>
+$("p").hide();
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle(1000);
+    });
+});
+</script>
+
 <div class="col-xs-12">
 </br>
-  <h2 align="center">Need Help?</h2>
+  <button class="btn btn-success" style="text-align:center;margin-left:43%;margin-right:50%"><h3>Need Help?</h3></button>
+  <div>
   <p align="center">Try dragging the blocks into the spots to change the number of columns, rows, colors and drop speed. Remember to put numbers in the columns, rows, and drop speed sections for them to work correctly!</p>
   <p align="center">Remember that changing the number of rows/columns can make some columns in space the window doesn't show! You can also restrict the area within the window that can be used for Tetris</p>
   <p align="center">After dragging in a color block, it can take a few seconds to take effect.</p>
   <p align="center">Higher drop speeds will result in the game slowing down, and lower drop speeds will result in the game moving more quickly!</p>
+</br>
+<p align="center">Rearranging these blocks change the <em>assignments</em> these <em>variables</em> have. Click <a href="https://en.wikipedia.org/wiki/Assignment_(computer_science)" target="_blank">here</a> to learn more!</p>
+</div>
+</div>
